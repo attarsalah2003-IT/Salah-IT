@@ -3,7 +3,7 @@
  */
 import React from "react";
 
-const About: React.FC = () => {
+const Aboutus: React.FC = () => {
   return (
     <section className="flex flex-col mt-24 w-full max-w-screen-xl text-center max-md:mt-10 max-md:max-w-full">
       <div className="flex flex-col w-full text-zinc-800 max-md:max-w-full">
@@ -23,4 +23,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default Aboutus;
