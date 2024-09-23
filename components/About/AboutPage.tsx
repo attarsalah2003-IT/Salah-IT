@@ -4,17 +4,17 @@
 import React from "react";
 import Layout from "./Layout";
 import Hero from "./Heroabout";
-import AboutSection from "./AboutSection";
 import TeamSection from "./TeamSection";
 import BlogPosts from "./BlogPosts";
 import ServicesSection from "./ServicesSection";
+import AboutUs from "./AboutUs/AboutUs";
+import WhoWeAre from "./whoweare/WhoWeAre";
 
 const AboutPage: React.FC = () => {
   return (
     <Layout>
-      <Hero />
-      <AboutSection />
-      <TeamSection />
+      <AboutUs />
+      <WhoWeAre/>
       <BlogPosts />
       <ServicesSection />
     </Layout>
