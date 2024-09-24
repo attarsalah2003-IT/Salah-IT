@@ -18,7 +18,7 @@ const Header: React.FC = () => {
           <a href="Pricing">Pricing</a>
           <a href="blog">Blog</a>
           <a
-            href="#contact"
+            href="ContactUs"
             className="self-stretch px-8 py-2.5 text-blue-400 border border-blue-400 border-solid rounded-[100px] max-md:px-5"
           >
             Contact Us

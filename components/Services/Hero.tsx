@@ -10,14 +10,14 @@ interface HeroProps {
   description: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ backgroundSrc, title, description }) => {
+const Hero: React.FC<HeroProps> = ({ title, description }) => {
   return (
     <section className="flex relative flex-col items-center pb-20 w-full min-h-[542px] max-md:max-w-full">
       <img
         loading="lazy"
-        src={backgroundSrc}
+        src= "https://cdn.builder.io/api/v1/image/assets/TEMP/2666b63e56047f781d7ce3108dfd3695df328b40fe68b68630ace732ee6dfd60?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
         alt="Hero background"
-        className="object-cover absolute inset-0 size-full"
+        className="object-cover absolute inset-0 w-full h-full max-h-[600px]"
       />
       <div className="relative mt-28 text-7xl font-semibold tracking-tighter leading-none text-white max-md:mt-10 max-md:text-4xl">
         {title}

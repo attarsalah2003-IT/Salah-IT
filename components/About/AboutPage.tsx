@@ -15,7 +15,6 @@ const AboutPage: React.FC = () => {
     <Layout>
       <AboutUs />
       <WhoWeAre/>
-      <BlogPosts />
       <ServicesSection />
     </Layout>
   );

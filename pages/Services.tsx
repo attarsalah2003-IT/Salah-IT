@@ -1,11 +1,18 @@
 import React from 'react'
-import CarWashService from '../components/Services/CarWashService'
+import CarServices from '../components/Services/CarServices'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Hero from '../components/Services/Hero'
+
 
 
 function Services() {
   return (
     <div>
-      <CarWashService />
+      <Header />
+      <Hero />
+      <CarServices />
+      <Footer />
     </div>
   )
 }

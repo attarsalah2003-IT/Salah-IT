@@ -3,12 +3,12 @@
  */
 import React from "react";
 import ReactDOM from "react-dom";
-import CarWashService from "./components/CarWashService";
 import "./index.css";
+import ServicesSection from "./ServicesSection";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CarWashService />
+    <ServicesSection />
   </React.StrictMode>,
   document.getElementById("root")
 );
