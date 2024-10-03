@@ -3,9 +3,6 @@
  */
 import React from "react";
 import Layout from "./Layout";
-import Hero from "./Heroabout";
-import TeamSection from "./TeamSection";
-import BlogPosts from "./BlogPosts";
 import ServicesSection from "./ServicesSection";
 import AboutUs from "./AboutUs/AboutUs";
 import WhoWeAre from "./whoweare/WhoWeAre";
