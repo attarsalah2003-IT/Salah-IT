@@ -3,11 +3,18 @@ import ReactDOM from "react-dom/client";  // Import from 'react-dom/client'
 import "./index.css";
 import ServicesSection from "./ServicesSection";
 
-// Create a root container
-const root = ReactDOM.createRoot(document.getElementById("root"));
+// Get the root element
+const rootElement = document.getElementById("root");
 
-root.render(
-  <React.StrictMode>
-    <ServicesSection />
-  </React.StrictMode>
-);
+if (rootElement) {
+  // Only create the root if the element exists
+  const root = ReactDOM.createRoot(rootElement);
+  
+  root.render(
+    <React.StrictMode>
+      <ServicesSection />
+    </React.StrictMode>
+  );
+} else {
+  console.error("Root element not found");
+}
