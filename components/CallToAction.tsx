@@ -10,7 +10,7 @@ const CallToAction: React.FC = () => {
         <div className="flex flex-col w-[56%] max-md:ml-0 max-md:w-full">
           <div className="flex flex-col items-start px-20 py-12 mt-16 mr-0 w-full bg-sky-50 rounded-3xl max-md:px-5 max-md:mt-10 max-md:max-w-full">
             <h2 className="text-5xl font-semibold tracking-tighter leading-[56px] text-zinc-800 max-md:text-4xl max-md:leading-[52px]">
-              Want to clean <br /> your lovely <br /> car today?
+              Want to clean <br /> your lovely <br /> car today
             </h2>
             <a
               href="#book-appointment"
