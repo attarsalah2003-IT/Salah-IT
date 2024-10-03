@@ -22,7 +22,7 @@ const Testimonial: React.FC = () => {
         <div className="flex flex-col mt-7 w-full max-w-[540px] max-md:max-w-full">
           <blockquote className="text-2xl font-semibold leading-8 text-zinc-800 max-md:max-w-full">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
+            industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of
           </blockquote>
           <div className="flex flex-wrap gap-10 items-center mt-6 max-md:max-w-full">

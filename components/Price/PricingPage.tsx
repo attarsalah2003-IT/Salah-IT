@@ -99,7 +99,7 @@ const PricingPage: React.FC = () => {
         <PackageSection title="Exterior Detailing" packages={exteriorPackages} />
         <PackageSection title="Interior Detailing" packages={interiorPackages} />
         <div className="self-center mt-10 text-xl font-medium leading-8 text-center text-black max-md:max-w-full">
-          If you leave garbage in your vehicle's interior to the extent that it causes a significant delay to the detailing job,
+          If you leave garbage in your vehicles interior to the extent that it causes a significant delay to the detailing job,
           <br /> then you may be subject to a $75 Clean Out Fee.
         </div>
         <PackageSection title="Full Detailing" packages={fullDetailingPackages} />

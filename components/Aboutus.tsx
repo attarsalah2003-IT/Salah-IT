@@ -15,9 +15,9 @@ const Aboutus: React.FC = () => {
         </h2>
       </div>
       <p className="mt-6 text-xl leading-8 opacity-50 text-zinc-800 max-md:max-w-full">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the <br />
-        industry's standard dummy text ever since the 1500s, when an unknown
+        Lorem Ipsum is simply dummy text of the pg and typesetting
+        industry Lorem Ipsum has been the <br />
+        industrys standard dummy text ever since the 1500s when an unknown
       </p>
     </section>
   );
