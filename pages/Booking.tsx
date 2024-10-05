@@ -1,16 +1,20 @@
-import React from 'react'
-import BookingForm from '../components/Booking/BookingForm'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import React from 'react';
+import BookingForm from '../components/Booking/BookingForm';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 function Booking() {
+  // Define navItems
+  const navItems = ['Home', 'About Us', 'Services', 'Pricing', 'Contact'];
+
   return (
     <div>
-        <Header />
+      {/* Pass navItems to Header */}
+      <Header navItems={navItems} />
       <BookingForm />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default Booking
+export default Booking;
