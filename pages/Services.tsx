@@ -7,9 +7,10 @@ import Hero from '../components/Services/Hero'
 
 
 function Services() {
+  const navItems = ['Home', 'About Us', 'Services', 'Pricing', 'Contact'];
   return (
     <div>
-      <Header />
+      <Header navItems={navItems}/>
       <Hero />
       <CarServices />
       <Footer />
