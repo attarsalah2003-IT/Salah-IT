@@ -11,7 +11,7 @@ import Footer from "./Footer";
 
 const MainLayout: React.FC = () => {
   // Define the navItems array
-  const navItems = ['Home', 'About Us', 'Services', 'Testimonial', 'Partners', 'Pricing', 'Contact'];
+  const navItems = ['Home', 'About Us', 'Services', 'Pricing', 'Contact'];
 
   return (
     <div className="flex flex-col bg-white">
