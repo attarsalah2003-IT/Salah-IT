@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import ContactForm from '../components/ContactUs/ContactForm/ContactForm'
 import Footer from '../components/Footer'
 
-function ContactUs() {
+function Contact() {
   const navItems = ['Home', 'About Us', 'Services', 'Pricing', 'Contact'];
   return (
     <div>
@@ -14,4 +14,4 @@ function ContactUs() {
   )
 }
 
-export default ContactUs
+export default Contact
