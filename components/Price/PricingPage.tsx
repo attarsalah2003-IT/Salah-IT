@@ -8,7 +8,7 @@ import AddonSection from './AddonSection';
 import Footer from './Footer';
 
 const PricingPage: React.FC = () => {
-  const navItems = ['About', 'Services', 'Pricing', 'Blog'];
+  const navItems = ['Home','AboutUs', 'Services', 'Pricing', 'Blog'];
   
   const exteriorPackages = [
     {

@@ -1,20 +1,16 @@
 import React from 'react';
 import CarServices from '../components/Services/CarServices';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Layout from '../components/About/Layout';
 import Hero from '../components/Services/Hero';
 
-function Services() {
-  const navItems = ['Home', 'About Us', 'Services', 'Pricing'];
-
+const Services: React.FC = () => {
   return (
-    <div>
-      <Header navItems={navItems} />
-      <Hero />
-      <CarServices />
-      <Footer />
-    </div>
+      <Layout>
+        <Hero />
+        < CarServices />
+      </Layout>
+    
   );
-}
+};
 
 export default Services;
