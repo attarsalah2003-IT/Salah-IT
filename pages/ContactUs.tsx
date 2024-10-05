@@ -4,9 +4,10 @@ import ContactForm from '../components/ContactUs/ContactForm/ContactForm'
 import Footer from '../components/Footer'
 
 function ContactUs() {
+  const navItems = ['Home', 'About Us', 'Services', 'Pricing', 'Contact'];
   return (
     <div>
-      <Header />
+      <Header navItems={navItems}/>
       <ContactForm />
       <Footer />
     </div>
