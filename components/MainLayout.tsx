@@ -22,7 +22,6 @@ const MainLayout: React.FC = () => {
         <Hero />
         <Aboutus />
         <Services />
-        <ServicesSection />
         <Testimonial />
         <Partners />
         <Pricing />
