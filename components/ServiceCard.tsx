@@ -4,18 +4,23 @@ interface ServiceCardProps {
   title: string;
   description: string;
   iconSrc: string;
+  isHighlighted?: boolean; // Optional prop
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   iconSrc,
+  isHighlighted = false, // Default to false if not provided
 }) => {
   const baseClasses =
-    "flex flex-col p-10 rounded-3xl min-h-[240px] min-w-[240px] w-[400px] max-md:px-5 bg-white text-zinc-800 hover:bg-blue-400 hover:text-white transition-colors duration-300 ease-in-out";
+    "flex flex-col p-10 rounded-3xl min-h-[240px] min-w-[240px] w-[400px] max-md:px-5";
+  const hoverClasses = isHighlighted
+    ? "hover:bg-blue-400 hover:text-white"
+    : "hover:bg-white hover:text-zinc-800";
 
   return (
-    <div className={baseClasses}>
+    <div className={`${baseClasses} ${hoverClasses} bg-white text-zinc-800`}>
       <img
         loading="lazy"
         src={iconSrc}
