@@ -65,12 +65,13 @@ const Hero: React.FC = () => {
             </div>
           </div>
           <div className="flex flex-col ml-5 md:ml-0 w-[61%] max-md:w-full max-custom:w-full max-custom:items-center">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/91eb3de9a593bd5c1de694e60a1834d441340d5e7a6f853a3073029f0797d587?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
-              alt="Car being cleaned"
-              className="object-cover w-full max-custom:w-full max-md:max-w-full"
-            />
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/91eb3de9a593bd5c1de694e60a1834d441340d5e7a6f853a3073029f0797d587?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
+            alt="Car being cleaned"
+            className="object-cover w-full max-custom:w-full max-md:max-w-full animate-slide-in"
+          />
+
           </div>
         </div>
       </div>
