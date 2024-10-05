@@ -1,4 +1,3 @@
-
 import React from "react";
 import ServiceCard from "./ServiceCard";
 
@@ -16,7 +15,6 @@ const servicesData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     iconSrc:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/6fd82b78f9b052f3589677141fc44291bce657b21c17e5485cd356d14869e4de?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11",
-    isHighlighted: true,
   },
   {
     title: "Sustainability",
@@ -36,7 +34,6 @@ const Services: React.FC = () => {
           title={service.title}
           description={service.description}
           iconSrc={service.iconSrc}
-          isHighlighted={service.isHighlighted}
         />
       ))}
     </section>
@@ -44,3 +41,4 @@ const Services: React.FC = () => {
 };
 
 export default Services;
+
