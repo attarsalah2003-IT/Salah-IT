@@ -6,9 +6,9 @@ const AboutUs: React.FC = () => {
     <main className="flex relative flex-col items-center pb-28 w-full min-h-[491px] max-md:pb-24 max-md:max-w-full">
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/51f3959d6ec6eb25a028945413ac8aff50d901f9b1b584d34080538bf6fe4f55?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
+        src="https://i.imgur.com/s7aS6g2.png"
         alt="Background image"
-        className="object-cover absolute inset-0 w-full h-full max-h-[600px]"
+        className="object-cover absolute inset-0 w-full max-h-[600px] h-auto"  // Adjusted here
       />
       <HeroSection />
     </main>
@@ -16,4 +16,3 @@ const AboutUs: React.FC = () => {
 };
 
 export default AboutUs;
-
