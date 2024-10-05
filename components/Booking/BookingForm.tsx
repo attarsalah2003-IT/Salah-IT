@@ -73,240 +73,265 @@ const BookingForm: React.FC = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Send the form data using EmailJS
     emailjs
-    .send(
-      "service_cdz4bl6", // Your service ID
-      "template_8vh8iuk", // Your template ID
-      {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        phone: formData.phone,
-        interestedServices: formData.interestedServices.join(", "),
-        addOns: formData.addOns.join(", "),
-        vehicleInfo: formData.vehicleInfo,
-        freePickup: formData.freePickup ? "Yes" : "No",
-        homeAddress: formData.freePickup ? formData.homeAddress : "N/A", // Conditionally include home address
-        comments: formData.comments,
-      },
-      "JIT7wDfN9lboVIXNK" // Your public key
-    )
-    .then(
-      (response) => {
-        console.log("SUCCESS!", response.status, response.text);
-        setMessage("Booking submitted successfully!");
-        setLoading(false);
-  
-        // Reset form after successful submission
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          interestedServices: [],
-          addOns: [],
-          vehicleInfo: "",
-          freePickup: false,
-          homeAddress: "",
-          comments: "",
-        });
-      },
-      (err) => {
-        console.log("FAILED...", err);
-        setMessage("Booking submission failed. Please try again.");
-        setLoading(false);
-      }
-    );
-  
+      .send(
+        "service_cdz4bl6", // Your service ID
+        "template_8vh8iuk", // Your template ID
+        {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          interestedServices: formData.interestedServices.join(", "),
+          addOns: formData.addOns.join(", "),
+          vehicleInfo: formData.vehicleInfo,
+          freePickup: formData.freePickup ? "Yes" : "No",
+          homeAddress: formData.freePickup ? formData.homeAddress : "N/A",
+          comments: formData.comments,
+        },
+        "JIT7wDfN9lboVIXNK" // Your public key
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setMessage("Booking submitted successfully!");
+          setLoading(false);
+
+          // Reset form
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            interestedServices: [],
+            addOns: [],
+            vehicleInfo: "",
+            freePickup: false,
+            homeAddress: "",
+            comments: "",
+          });
+        },
+        (err) => {
+          console.log("FAILED...", err);
+          setMessage("Booking submission failed. Please try again.");
+          setLoading(false);
+        }
+      );
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-        <h1 className="text-3xl font-medium text-black">Booking Form</h1>
+    <main className="flex justify-center items-center min-h-screen bg-gray-100">
+      <section className="flex gap-10 items-stretch max-w-7xl">
+        {/* Form Section */}
+        <div className="flex flex-col w-full max-w-md">
+          <h1 className="text-3xl font-medium text-black">Booking Form</h1>
+          <p className="mt-4 text-base leading-7 text-black">
+            Please fill in the details to book your service.
+          </p>
+          <form onSubmit={handleSubmit} className="flex flex-col mt-8 w-full">
+            {/* First Name */}
+            <div className="flex flex-col mt-4">
+              <label htmlFor="firstName" className="font-medium leading-none text-red-600">
+                First Name <span className="text-red-600">*</span>
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleInputChange}
+                required
+                placeholder="John"
+                className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 font-light leading-6 text-black bg-white border-gray-300 border-solid shadow-sm border-[0.91px]"
+                aria-label="First Name"
+              />
+            </div>
 
-        {/* First Name */}
-        <label>
-          First Name
-          <input
-            type="text"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleInputChange}
-            required
-            className="border"
+            {/* Last Name */}
+            <div className="flex flex-col mt-4">
+              <label htmlFor="lastName" className="font-medium leading-none text-red-600">
+                Last Name <span className="text-red-600">*</span>
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleInputChange}
+                required
+                placeholder="Doe"
+                className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 font-light leading-6 text-black bg-white border-gray-300 border-solid shadow-sm border-[0.91px]"
+                aria-label="Last Name"
+              />
+            </div>
+
+            {/* Email */}
+            <div className="flex flex-col mt-4">
+              <label htmlFor="email" className="font-medium leading-none text-red-600">
+                Email <span className="text-red-600">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+                placeholder="you@company.com"
+                className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 font-light leading-6 text-black bg-white border-gray-300 border-solid shadow-sm border-[0.91px]"
+                aria-label="Email"
+              />
+            </div>
+
+            {/* Phone */}
+            <div className="flex flex-col mt-4">
+              <label htmlFor="phone" className="font-medium leading-none text-red-600">
+                Phone <span className="text-red-600">*</span>
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                required
+                placeholder="123-456-7890"
+                className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 font-light leading-6 text-black bg-white border-gray-300 border-solid shadow-sm border-[0.91px]"
+                aria-label="Phone"
+              />
+            </div>
+
+            {/* Interested Services */}
+            <div className="flex flex-col mt-4">
+              <label className="font-medium leading-none text-red-600">Interested Services</label>
+              <div className="flex flex-col">
+                <label>
+                  <input
+                    type="checkbox"
+                    value="Interior Detailing"
+                    onChange={handleServiceChange}
+                  />
+                  Interior Detailing
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    value="Exterior Detailing"
+                    onChange={handleServiceChange}
+                  />
+                  Exterior Detailing
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    value="Complete Detailing"
+                    onChange={handleServiceChange}
+                  />
+                  Complete Detailing
+                </label>
+              </div>
+            </div>
+
+            {/* Add-ons */}
+            <div className="flex flex-col mt-4">
+              <label className="font-medium leading-none text-red-600">Add-ons</label>
+              <div className="flex flex-col">
+                <label>
+                  <input type="checkbox" value="Ceramic Coating" onChange={handleAddOnChange} />
+                  Ceramic Coating
+                </label>
+                <label>
+                  <input type="checkbox" value="Headlight Restoration" onChange={handleAddOnChange} />
+                  Headlight Restoration
+                </label>
+              </div>
+            </div>
+
+            {/* Vehicle Info */}
+            <div className="flex flex-col mt-4">
+              <label htmlFor="vehicleInfo" className="font-medium leading-none text-red-600">
+                Vehicle Info
+              </label>
+              <textarea
+                id="vehicleInfo"
+                name="vehicleInfo"
+                value={formData.vehicleInfo}
+                onChange={handleInputChange}
+                placeholder="Make, Model, Year"
+                className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 font-light leading-6 text-black bg-white border-gray-300 border-solid shadow-sm border-[0.91px]"
+                aria-label="Vehicle Info"
+              />
+            </div>
+
+            {/* Free Pickup */}
+            <div className="flex flex-col mt-4">
+              <label className="font-medium leading-none text-red-600">Free Pickup</label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="freePickup"
+                  checked={formData.freePickup}
+                  onChange={handleCheckboxChange}
+                />
+                Yes
+              </label>
+            </div>
+
+            {/* Home Address */}
+            {formData.freePickup && (
+              <div className="flex flex-col mt-4">
+                <label htmlFor="homeAddress" className="font-medium leading-none text-red-600">
+                  Home Address
+                </label>
+                <textarea
+                  id="homeAddress"
+                  name="homeAddress"
+                  value={formData.homeAddress}
+                  onChange={handleInputChange}
+                  placeholder="Street, City, Zip"
+                  className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 font-light leading-6 text-black bg-white border-gray-300 border-solid shadow-sm border-[0.91px]"
+                  aria-label="Home Address"
+                />
+              </div>
+            )}
+
+            {/* Comments */}
+            <div className="flex flex-col mt-4">
+              <label htmlFor="comments" className="font-medium leading-none text-red-600">
+                Comments
+              </label>
+              <textarea
+                id="comments"
+                name="comments"
+                value={formData.comments}
+                onChange={handleInputChange}
+                placeholder="Any additional comments?"
+                className="flex overflow-hidden gap-2 items-center px-4 py-3 mt-1.5 font-light leading-6 text-black bg-white border-gray-300 border-solid shadow-sm border-[0.91px]"
+                aria-label="Comments"
+              />
+            </div>
+
+            {/* Submit button */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="overflow-hidden gap-2 self-stretch px-5 py-3 mt-7 text-base font-medium text-white bg-blue-400 rounded-[40px] shadow-[0px_1px_2px_rgba(16,24,40,0.05)]"
+            >
+              {loading ? "Submitting..." : "Submit"}
+            </button>
+          </form>
+        </div>
+
+        {/* Image Section */}
+        <div className="flex justify-center items-center">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f8d3c7def21e0693d44a2967ee5135f54c88f7cb1a0061ea906b14905f5a7e0d?placeholderIfAbsent=true&apiKey=a9e86b264a2b427cb02fa9112891bf11"
+            alt="Auto Detailing"
+            className="object-contain h-full w-96" // Set a fixed width for the image
           />
-        </label>
-
-        {/* Last Name */}
-        <label>
-          Last Name
-          <input
-            type="text"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleInputChange}
-            required
-            className="border"
-          />
-        </label>
-
-        {/* Email */}
-        <label>
-          Email
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-            className="border"
-          />
-        </label>
-
-        {/* Phone */}
-        <label>
-          Phone
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleInputChange}
-            required
-            className="border"
-          />
-        </label>
-
-        {/* Interested Services */}
-        <label>
-          Interested Services
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                value="Interior Detailing"
-                onChange={handleServiceChange}
-              />
-              Interior Detailing
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                value="Exterior Detailing"
-                onChange={handleServiceChange}
-              />
-              Exterior Detailing
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                value="Complete Detailing"
-                onChange={handleServiceChange}
-              />
-              Complete Detailing
-            </label>
-          </div>
-        </label>
-
-        {/* Add-ons */}
-        <label>
-          Add-ons
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                value="Engine Bay Cleaning"
-                onChange={handleAddOnChange}
-              />
-              Engine Bay Cleaning
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                value="Headlight Restoration"
-                onChange={handleAddOnChange}
-              />
-              Headlight Restoration
-            </label>
-          </div>
-        </label>
-
-        {/* Vehicle Information */}
-        <label>
-          Vehicle Information (Year/Make/Model/Color)
-          <input
-            type="text"
-            name="vehicleInfo"
-            value={formData.vehicleInfo}
-            onChange={handleInputChange}
-            required
-            className="border"
-          />
-        </label>
-
-        {/* Free Pickup and Drop-off */}
-        <label>
-          Free Pickup and Drop-off
-          <div>
-            <label>
-              <input
-                type="radio"
-                name="freePickup"
-                value="yes"
-                checked={formData.freePickup === true}
-                onChange={() => setFormData({ ...formData, freePickup: true })}
-              />
-              Yes
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="freePickup"
-                value="no"
-                checked={formData.freePickup === false}
-                onChange={() => setFormData({ ...formData, freePickup: false })}
-              />
-              No
-            </label>
-          </div>
-        </label>
-
-        {/* Home Address (only show if pickup is selected) */}
-        {formData.freePickup && (
-          <label>
-            Home Address
-            <input
-              type="text"
-              name="homeAddress"
-              value={formData.homeAddress}
-              onChange={handleInputChange}
-              required={formData.freePickup}
-              className="border"
-            />
-          </label>
-        )}
-
-        {/* Other Comments */}
-        <label>
-          Other Comments
-          <textarea
-            name="comments"
-            value={formData.comments}
-            onChange={handleInputChange}
-            className="border"
-          />
-        </label>
-
-        {/* Submit Button */}
-        <button type="submit" disabled={loading}>
-          {loading ? "Submitting..." : "Submit"}
-        </button>
-
-        {/* Success/Error Message */}
-        {message && <p>{message}</p>}
-      </form>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 };
 
