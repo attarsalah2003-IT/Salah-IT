@@ -3,7 +3,7 @@ import Hero2 from "./Hero2";
 
 const Hero: React.FC = () => {
   return (
-    <main className="flex relative flex-col items-center pb-10 w-full min-h-[491px] max-md:min-h-[200px] max-md:pb-5 max-md:max-w-full">
+    <main className="flex relative flex-col items-center pb-10 w-full min-h-[491px] max-md:min-h-[150px] max-md:pb-5 max-md:max-w-full">
       <div className="relative w-full max-h-[600px]">
         <img
           loading="lazy"
