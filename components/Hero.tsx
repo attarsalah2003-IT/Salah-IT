@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section className="flex z-10 flex-col items-start pl-20 -mt-2 w-full max-md:pl-5 max-md:max-w-full">
+    <section className="flex z-10 flex-col items-start pl-20 -mt-7 w-full max-md:pl-5 max-md:max-w-full">
       <div className="self-end w-full max-w-[1329px] max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex flex-col w-[39%] max-md:ml-0 max-md:w-full">
