@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col px-20 py-14 mt-0 w-full text-base text-white bg-blue-400 max-md:px-5 max-md:mt-10 max-md:max-w-full">
+    <footer className="flex flex-col px-20 py-14 mt-0 w-full text-base text-white bg-blue-400 max-md:px-5 max-md:mt-0 max-md:max-w-full">
       <div className="flex flex-wrap gap-10 justify-between items-start w-full max-md:max-w-full">
         <p className="leading-6 w-[230px]">
           We make sure to give your car the pampering it deserves in BubBlast.
