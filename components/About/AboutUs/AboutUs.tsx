@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
         loading="lazy"
         src="https://i.imgur.com/s7aS6g2.png"
         alt="Background image"
-        className="object-cover absolute inset-0 w-full max-h-[600px] h-auto"  // Adjusted here
+        className="object-cover absolute inset-0 w-full max-h-[600px] h-auto"  
       />
       <HeroSection />
     </main>

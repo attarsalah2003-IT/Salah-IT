@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import Hero from '../components/Services/Hero';
 
 function Services() {
-  const navItems = ['Home', 'About Us', 'Services', 'Pricing', 'Contact'];
+  const navItems = ['Home', 'About Us', 'Services', 'Pricing'];
 
   const heroProps = {
     backgroundSrc: 'https://example.com/your-background-image.jpg', // Replace with actual image URL

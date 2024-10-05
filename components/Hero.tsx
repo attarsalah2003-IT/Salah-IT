@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
 
                 {/* Centering the Book Appointment button for custom width */}
                 <a
-                  href="#book"
+                  href="Booking"
                   className="self-start max-custom:self-center px-8 py-2.5 mt-8 text-base font-bold text-white bg-blue-400 rounded-[100px] max-md:px-5"
                 >
                   Book Appointment

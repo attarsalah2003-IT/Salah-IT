@@ -11,7 +11,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Define the navItems array
-  const navItems = ['Home', 'About Us', 'Services', 'Products']; // Example nav items
+  const navItems = ['Home', 'About Us', 'Services','Pricing']; // 
 
   return (
     <div className="flex flex-col bg-white">
