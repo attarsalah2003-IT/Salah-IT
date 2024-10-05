@@ -4,7 +4,7 @@ interface WhoWeAreProps {}
 
 const WhoWeAre: React.FC<WhoWeAreProps> = () => {
   return (
-    <main className="relative flex justify-center items-center w-full bg-gray-100 mt-0 max-md:mt-0">
+    <main className="relative flex justify-center items-center w-full bg-gray-100 max-md:mt-0">
       {/* Ensure no space at the top on mobile */}
       <div className="absolute inset-0 top-0 z-[-1] w-full h-full">
         {/* Background Image */}
@@ -15,7 +15,7 @@ const WhoWeAre: React.FC<WhoWeAreProps> = () => {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8 max-md:py-8">
+      <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl px-4 py-16 sm:px-0 lg:px-8 max-md:py-6">
         {/* Left side: Image */}
         <div className="lg:w-1/2 flex justify-center items-center">
           <img
