@@ -7,16 +7,10 @@ import Hero from '../components/Services/Hero';
 function Services() {
   const navItems = ['Home', 'About Us', 'Services', 'Pricing'];
 
-  const heroProps = {
-    backgroundSrc: 'https://example.com/your-background-image.jpg', // Replace with actual image URL
-    title: 'Our Services',
-    description: 'Explore our wide range of car services designed to suit all your needs.',
-  };
-
   return (
     <div>
       <Header navItems={navItems} />
-      <Hero {...heroProps} />
+      <Hero />
       <CarServices />
       <Footer />
     </div>

@@ -1,30 +1,21 @@
 import React from "react";
-import Button from "./Button";
+import Hero2 from "./Hero2";
 
-interface HeroProps {
-  backgroundSrc: string;
-  title: string;
-  description: string;
-}
-
-const Hero: React.FC<HeroProps> = ({ backgroundSrc, title, description }) => {
+const Hero: React.FC = () => {
   return (
-    <section className="flex relative flex-col items-center pb-20 w-full min-h-[542px] max-md:max-w-full">
-      {/* Use the backgroundSrc prop */}
-      <img
-        loading="lazy"
-        src={backgroundSrc}
-        alt="Hero background"
-        className="object-cover absolute inset-0 w-full h-full max-h-[600px]"
-      />
-      <div className="relative mt-28 text-7xl font-semibold tracking-tighter leading-none text-white max-md:mt-10 max-md:text-4xl">
-        {title}
+    <main className="flex relative flex-col items-center pb-28 w-full min-h-[491px] max-md:pb-24 max-md:max-w-full">
+      <div className="relative w-full max-h-[600px]">
+        <img
+          loading="lazy"
+          src="https://i.imgur.com/s7aS6g2.png"
+          alt="Background image"
+          className="object-cover absolute inset-0 w-full max-h-[600px] h-auto transition duration-300"
+        />
+        {/* Overlay for hover effect */}
+        <div className="absolute inset-0 bg-blue-500 opacity-0 transition-opacity duration-300 hover:opacity-50" />
       </div>
-      <p className="relative mt-10 ml-4 text-xl leading-8 text-center text-white w-[527px] max-md:max-w-full">
-        {description}
-      </p>
-      <Button className="relative mt-10">Get in touch</Button>
-    </section>
+      <Hero2 />
+    </main>
   );
 };
 
