@@ -1,10 +1,10 @@
 import React from "react";
+import CountUp from "react-countup";
 
 const Hero: React.FC = () => {
   return (
     <section className="flex z-10 flex-col items-start pl-20 -mt-0 w-full max-md:pl-5 max-md:max-w-full">
       <div className="self-end w-full max-w-full max-md:max-w-full">
-        {/* At custom, use flex-col and items-center to center content */}
         <div className="flex gap-5 max-custom:flex-col max-custom:items-center">
           <div className="flex flex-col w-[39%] max-md:ml-0 max-md:w-full max-custom:items-center">
             <div className="flex z-10 flex-col mt-28 mr-0 w-full max-md:mt-10 max-md:max-w-full">
@@ -19,7 +19,6 @@ const Hero: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Centering the Book Appointment button for custom width */}
                 <a
                   href="Booking"
                   className="self-start max-custom:self-center px-8 py-2.5 mt-8 text-base font-bold text-white bg-blue-400 rounded-[100px] max-md:px-5"
@@ -30,7 +29,7 @@ const Hero: React.FC = () => {
               <div className="flex flex-wrap gap-10 items-center mt-24 max-md:mt-10 max-custom:justify-center">
                 <div className="flex flex-col self-stretch my-auto">
                   <div className="text-3xl font-semibold tracking-tighter leading-none text-blue-400">
-                    8,000+
+                    <CountUp end={8000} duration={3} suffix="+" />
                   </div>
                   <div className="mt-1 text-base text-zinc-800">
                     Satisfied Clients
@@ -44,7 +43,7 @@ const Hero: React.FC = () => {
                 />
                 <div className="flex flex-col self-stretch my-auto">
                   <div className="text-3xl font-semibold tracking-tighter leading-none text-blue-400">
-                    150+
+                    <CountUp end={150} duration={3} suffix="+" />
                   </div>
                   <div className="mt-1 text-base text-zinc-800">Car Models</div>
                 </div>
@@ -56,7 +55,7 @@ const Hero: React.FC = () => {
                 />
                 <div className="flex flex-col self-stretch my-auto">
                   <div className="text-3xl font-semibold tracking-tighter leading-none text-blue-400">
-                    98%
+                    <CountUp end={98} duration={3} suffix="%" />
                   </div>
                   <div className="mt-1 text-base text-zinc-800">
                     Succession Rate
@@ -65,7 +64,6 @@ const Hero: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* This section will center the image and make it full width */}
           <div className="flex flex-col ml-5 md:ml-0 w-[61%] max-md:w-full max-custom:w-full max-custom:items-center">
             <img
               loading="lazy"
