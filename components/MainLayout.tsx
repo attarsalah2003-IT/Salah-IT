@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
@@ -11,9 +10,13 @@ import CallToAction from "./CallToAction";
 import Footer from "./Footer";
 
 const MainLayout: React.FC = () => {
+  // Define the navItems array
+  const navItems = ['Home', 'About Us', 'Services', 'Testimonial', 'Partners', 'Pricing', 'Contact'];
+
   return (
     <div className="flex flex-col bg-white">
-      <Header />
+      {/* Pass navItems to Header */}
+      <Header navItems={navItems} />
       <main>
         <Hero />
         <Aboutus />
