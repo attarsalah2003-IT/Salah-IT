@@ -1,7 +1,7 @@
 import React from 'react'
 import AboutPage from '../components/About/AboutPage'
 
-function About() {
+function AboutUs() {
   return (
     <div>
       < AboutPage />
@@ -9,4 +9,4 @@ function About() {
   )
 }
 
-export default About
+export default AboutUs
