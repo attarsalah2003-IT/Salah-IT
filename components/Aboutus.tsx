@@ -5,7 +5,7 @@ import React from "react";
 
 const Aboutus: React.FC = () => {
   return (
-    <section className="flex flex-col mt-24 w-full max-w-screen-xl text-center max-md:mt-10 max-md:max-w-full">
+    <section className="flex flex-col mt-24 w-full max-w-screen-xl text-center max-md:mt-10 max-md:max-w-full max-custom:self-center mx-auto">
       <div className="flex flex-col w-full text-zinc-800 max-md:max-w-full">
         <div className="self-center px-10 py-2.5 text-base tracking-widest bg-white rounded-[100px] max-md:px-5">
           ABOUT US
